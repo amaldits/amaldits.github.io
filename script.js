@@ -52,3 +52,8 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+function openNewTab(urlToOpen) {
+  // Open a new tab/window
+  window.open(urlToOpen, "_blank");
+}
