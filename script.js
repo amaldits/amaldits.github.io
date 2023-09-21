@@ -57,3 +57,25 @@ function openNewTab(urlToOpen) {
   // Open a new tab/window
   window.open(urlToOpen, "_blank");
 }
+
+const modal = document.getElementById("myModal");
+const openModalButton = document.getElementById("content");
+// const openModalButton = document.getElementsByClassName("open-modal-button");
+const closeModalButton = document.getElementById("closeModal");
+
+// Open the modal when the button is clicked
+openModalButton.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+// Close the modal when the close button is clicked
+closeModalButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Close the modal when the background is clicked
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});

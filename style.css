@@ -546,6 +546,7 @@ span {
 
 .project-content .content {
   position: relative;
+  text-align: justify;
   padding: 1.5rem;
   border: 0.2rem solid var(--main-color);
   border-radius: 0.6rem;
