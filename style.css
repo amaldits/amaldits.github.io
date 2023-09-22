@@ -14,6 +14,7 @@
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #183d3d;
+  --third-bg-color: #79a8a8;
   --text-color: #fff;
   --main-color: #0ef;
 }
@@ -36,7 +37,7 @@ body {
   left: 0;
   width: 100%;
   padding: 2rem 9%;
-  background: transparent;
+  background: var(--bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,9 +45,9 @@ body {
   transition: 0.3s;
 }
 
-.header.sticky {
-  background: var(--bg-color);
-}
+/* .header.sticky {
+  background: red;
+} */
 
 .logo {
   font-size: 2.5rem;
@@ -305,6 +306,9 @@ section {
 /* *** image *** */
 
 .home-img img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   max-width: 450px;
   margin-right: -20px;
   opacity: 0;
@@ -511,6 +515,7 @@ span {
   align-items: center;
   flex-direction: column;
   min-height: auto;
+  background: var(--second-bg-color);
   padding-bottom: 5rem;
 }
 
@@ -589,7 +594,7 @@ span {
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 
 .footer-text p {

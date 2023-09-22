@@ -22,17 +22,32 @@
     <title>Amaldi Tri Septyanto Portfolio</title>
   </head>
 
+  <script>
+    function scrollSmoothTo(elementId) {
+      var element = document.getElementById(elementId);
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    }
+  </script>
+
   <body>
-    <header class="header">
-      <a href="#" class="logo">amaldits</a>
+    <header class="header" id="header">
+      <a onclick="scrollSmoothTo('home')" class="logo" style="cursor: pointer">amaldits</a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
 
       <nav class="navbar">
-        <a href="#home" style="--i: 1" class="active">home</a>
+        <a onclick="scrollSmoothTo('home')" style="--i: 1; cursor: pointer" class="active">home</a>
+        <a onclick="scrollSmoothTo('about')" style="--i: 2; cursor: pointer">about</a>
+        <a onclick="scrollSmoothTo('journey')" style="--i: 3; cursor: pointer">journey</a>
+        <a onclick="scrollSmoothTo('project')" style="--i: 4; cursor: pointer">project</a>
+
+        <!-- <a href="#" style="--i: 1" class="active">home</a>
         <a href="#about" style="--i: 2">about</a>
         <a href="#journey" style="--i: 3">journey</a>
-        <a href="#project" style="--i: 4">project</a>
+        <a href="#project" style="--i: 4">project</a> -->
 
         <span class="active-nav"></span>
       </nav>
@@ -64,7 +79,7 @@
       </div>
 
       <!-- <div class="home-img">
-        <img src="home.png" alt="" />
+        <img src="home2.png" alt="" />
       </div> -->
 
       <!-- <div class="home-imgHover"></div> -->
@@ -206,10 +221,10 @@
         <div class="row">
           <div class="col-lg-4 mb-3 d-flex align-items-stretch">
             <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-              <img src="https://i.postimg.cc/28PqLLQC/dotonburi-canal-osaka-japan-700.jpg" class="card-img-top" alt="Card Image" />
+              <img src="drone_small.jpg" class="card-img-top" alt="Card Image" />
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Unmanned Aerial Vehicle</h5>
-                <p class="card-text mb-4">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges...</p>
+                <h5 class="card-title fs-3">Unmanned Aerial Vehicle</h5>
+                <p class="card-text mb-4 fs-4">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges...</p>
               </div>
             </div>
           </div>
@@ -217,16 +232,32 @@
             <div class="modal-dialog modal-dialog-scrollable modal-lg">
               <div class="modal-content" style="color: black">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Unmanned Aerial Vehicle</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p class="fs-3">
-                    This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes
-                    longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
-                  </p>
-                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                  <p>This content should appear at the bottom after you scroll.</p>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6 fs-3"><img src="drone.jpg" class="card-img-top" alt="Card Image" /></div>
+                      <div class="col-md-6 fs-3 d-flex justify-content-between">
+                        <p class="fs-4 text-start">
+                          When I was in college working on my final thesis, I worked on a project related to UAVs (Unmanned Aerial Vehicles. The mission of this vehicle is to carry out inspections on bridges with as little human influence
+                          as possible (semi-autonomous).
+                        </p>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-6 fs-3 d-flex justify-content-between">
+                        <p class="fs-4 text-start">
+                          Previously, the bridge must have a sensor that provides position, and status. So, if the bridge having trouble, the sensor will send a signal to GCS (Ground Control Station). The drone will receive the signal. If
+                          the condition is possible to do an inspection, the drone will take off with operator validation. The drone flies with a pattern depending on what situation the bridge has and takes video or image data for the
+                          surveyor or whoever wants to use the data. If the mission is done, the drone will fly to GCS.
+                        </p>
+                      </div>
+                      <div class="col-md-6 fs-3"><img src="output.gif" class="card-img-top" alt="..." /></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -237,28 +268,32 @@
           </div>
 
           <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-              <img src="https://i.postimg.cc/4xVY64PV/porto-timoni-double-beach-corfu-greece-700.jpg" class="card-img-top" alt="Card Image" />
+            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              <img src="tram2.jpg" class="card-img-top" alt="Card Image" />
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Porto Timoni Double Beach</h5>
-                <p class="card-text mb-4">Near Afionas village, on the west coast of Corfu island. The two beaches form two unique bays. The turquoise color of the sea contrasts to the high green hills surrounding it.</p>
+                <h5 class="card-title fs-3">Autonomous Tram</h5>
+                <p class="card-text mb-4 fs-4">TBD</p>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
               <div class="modal-content" style="color: black">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Unmanned Aerial Vehicle</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>
-                    This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes
-                    longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
-                  </p>
-                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                  <p>This content should appear at the bottom after you scroll.</p>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6 fs-3"><img src="https://i.postimg.cc/28PqLLQC/dotonburi-canal-osaka-japan-700.jpg" class="card-img-top" alt="Card Image" /></div>
+                      <div class="col-md-6 fs-3">
+                        <p class="fs-3">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges</p>
+                      </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <p>This content should appear at the bottom after you scroll.</p>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -269,28 +304,70 @@
           </div>
 
           <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-              <img src="https://i.postimg.cc/4xVY64PV/porto-timoni-double-beach-corfu-greece-700.jpg" class="card-img-top" alt="Card Image" />
+            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              <img src="wt.PNG" class="card-img-top" alt="Card Image" />
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Porto Timoni Double Beach</h5>
-                <p class="card-text mb-4">Near Afionas village, on the west coast of Corfu island. The two beaches form two unique bays. The turquoise color of the sea contrasts to the high green hills surrounding it.</p>
+                <h5 class="card-title fs-3">Worker Tracker</h5>
+                <p class="card-text mb-4 fs-4">TBD</p>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
               <div class="modal-content" style="color: black">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Unmanned Aerial Vehicle</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>
-                    This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes
-                    longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.
-                  </p>
-                  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                  <p>This content should appear at the bottom after you scroll.</p>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6 fs-3"><img src="https://i.postimg.cc/28PqLLQC/dotonburi-canal-osaka-japan-700.jpg" class="card-img-top" alt="Card Image" /></div>
+                      <div class="col-md-6 fs-3">
+                        <p class="fs-3">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges</p>
+                      </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <p>This content should appear at the bottom after you scroll.</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              <img src="wt.PNG" class="card-img-top" alt="Card Image" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-3">Turbo Spreader</h5>
+                <p class="card-text mb-4 fs-4">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges...</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+              <div class="modal-content" style="color: black">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Unmanned Aerial Vehicle</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-6 fs-3"><img src="https://i.postimg.cc/28PqLLQC/dotonburi-canal-osaka-japan-700.jpg" class="card-img-top" alt="Card Image" /></div>
+                      <div class="col-md-6 fs-3">
+                        <p class="fs-3">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges</p>
+                      </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <p>This content should appear at the bottom after you scroll.</p>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -404,7 +481,7 @@
       </div>
 
       <div class="footer-iconTop">
-        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+        <a onclick="scrollSmoothTo('home')" style="cursor: pointer"><i class="bx bx-up-arrow-alt"></i></a>
       </div>
     </footer>
 
