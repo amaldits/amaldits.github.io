@@ -102,7 +102,7 @@
         </p> -->
         <p>
           Hi, I'm Tyan, an Electrical Engineering Graduate who has high interest with IoT and robotic technology. I have over four years of experience in developing firmware for embedded systems. I got a bachelor's degree in electrical
-          engineering at the Institut Teknologi Bandung after finishing my thesis about unmanned aerial vehicles. As a student, I took part in many projects, one of which was a project to create an autonomous tram.
+          engineering at the Institut Teknologi Bandung after finishing my thesis about unmanned aerial vehicles.
         </p>
 
         <!-- <div class="btn-box btns">
@@ -361,14 +361,21 @@
                       <div class="col-md-6 fs-3"><img src="forklift_assets/forklift.PNG" class="card-img-top" alt="Card Image" /></div>
                       <div class="col-md-6 fs-3 d-flex justify-content-between">
                         <p class="fs-4 text-start">
-                          This project is a collaboration between ITB (Institut Teknologi Bandung), and CPIN (Charoen Pokphand Indonesia Tbk) which aims to create a forklift that can run autonomously, and locating itself in indoor facility.
+                          This project is a collaboration between ITB (Institut Teknologi Bandung), and CPIN (Charoen Pokphand Indonesia Tbk) which aims to create a forklift that can run autonomously, and locate itself in the indoor
+                          facility. The forklift has a LIDAR, and an IMU, which communicate to a mini PC.
                         </p>
                       </div>
                     </div>
                     <br />
                     <div class="row">
                       <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">TBD</p>
+                        <p class="fs-4 text-start">
+                          My role in creating an autonomous forklift is to integrate all the sensors and serve the data so the data can be used on all the methods.
+                          <br />
+                          <br />
+                          2 sensors generate data. The data that needs to be filtered. We filter using Kalman Filter. Those data are needed for implementing HectorSLAM so the forklift can map the warehouse and locate itself, so it can
+                          automate to carry a load, sign the destination, and drive to the location based on the map before, taking the load on its location, and back to home point.
+                        </p>
                       </div>
                       <div class="col-md-6 fs-3"><img src="forklift_assets/forklift_map.png" class="card-img-top" alt="..." /></div>
                     </div>
@@ -378,7 +385,6 @@
                         <i class="bx bxl-python"></i>
                         <i class="bx bxl-c-plus-plus"></i>
                         <img src="https://www.vectorlogo.zone/logos/ros/ros-ar21.svg" alt="" style="position: relative; bottom: 10px; width: 150px" />
-                        <img src="/Px4 media kit/PX4_logo_black.jpg" alt="" style="position: relative; bottom: 10px; width: 150px" />
                         <img src="linux.png" alt="" style="position: relative; bottom: 10px; width: 80px" />
                       </p>
                     </div>
@@ -528,10 +534,34 @@
                 <div class="modal-body">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-md-6 fs-3"><img src="humanoid_1.PNG" class="card-img-top" alt="Card Image" /></div>
+                      <div class="col-md-6 fs-3"><img src="humanoid.gif" class="card-img-top" alt="" /></div>
                       <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">TBD</p>
+                        <p class="fs-4 text-start">
+                          This project is intended to take part in a competition, Kontes Robot Sepak Bola - Humanoid (KRSBI-H). The robot will walk, kick, and coordinate with another robot making a pass. The humanoid robot has 20 servos and
+                          every servo communicates with each other using RS485/TTL. All servos are assembled and connected electrically to a sub-controller, CM730. This sub-controller is used for “translate” the high-level code so we can
+                          generate a move.
+                        </p>
                       </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <div class="col-md-6 fs-3 d-flex justify-content-between">
+                        <p class="fs-4 text-start">
+                          This robot also has a camera and mini PC. Mini PC as a main controller generates commands based on what it detects an object with the camera such as a ball, goalpost, straight line, and round circle. In this
+                          project, I was working on maintaining the electrical part and creating the electrical part to support the robot to make it easier to use. I created an interface to simplify creating strategy before the game starts.
+                        </p>
+                      </div>
+                      <div class="col-md-6 fs-3"><img src="humanoid2.gif" class="card-img-top" alt="" /></div>
+                    </div>
+                    <br />
+                    <div class="row">
+                      <p class="text-center" style="font-size: 7.5rem">
+                        <i class="bx bxl-c-plus-plus"></i>
+                        <img src="arduino.png" alt="arduino" style="height: 50px; width: auto; margin-bottom: 30px" />
+                        <img src="opencv.png" alt="opencv" style="position: relative; width: 80px; margin-bottom: 30px" />
+                        <img src="linux.png" alt="linux" style="position: relative; width: 80px; margin-bottom: 30px" />
+                        <img src="https://www.vectorlogo.zone/logos/ros/ros-ar21.svg" alt="ros" style="position: relative; width: 150px; margin-bottom: 30px" />
+                      </p>
                     </div>
                   </div>
                 </div>
