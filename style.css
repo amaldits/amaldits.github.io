@@ -308,10 +308,10 @@ section {
 
 .home-img img {
   position: relative;
-  bottom: 0;
-  right: 0;
-  max-width: 450px;
-  margin-right: -20px;
+  /* bottom: 0; */
+  /* right: 0; */
+  max-width: 750px;
+  margin-right: -50px;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 2s, 3s;
