@@ -110,6 +110,7 @@ section {
 
 .home-content {
   max-width: 60rem;
+  /* text-align: center; */
   z-index: 99;
 }
 
@@ -306,7 +307,7 @@ section {
 /* *** image *** */
 
 .home-img img {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   right: 0;
   max-width: 450px;
