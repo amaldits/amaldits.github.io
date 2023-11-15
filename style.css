@@ -307,7 +307,7 @@ section {
 /* *** image *** */
 
 .home-img img {
-  /* position: absolute; */
+  position: relative;
   bottom: 0;
   right: 0;
   max-width: 450px;
