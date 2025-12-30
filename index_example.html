@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaldi Tri Septyanto - IoT & Robotics Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style_example.css" />
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 40%; left: 60%; animation-delay: 4s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 70%; left: 30%; animation-delay: 6s;"></div>
+    </div>
+
+    <header id="header">
+        <div class="logo" onclick="scrollToSection('home')">amaldits</div>
+        <nav>
+            <a onclick="scrollToSection('home')" class="active">Home</a>
+            <a onclick="scrollToSection('about')">About</a>
+            <a onclick="scrollToSection('journey')">Journey</a>
+            <a onclick="scrollToSection('projects')">Projects</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <img src="drone_small_crop_4.jpg" style="width: 300px; height: auto;" alt="" />
+                <h3>Portfolio of</h3>
+                <h1>Amaldi Tri Septyanto</h1>
+                <p>IoT & Robotics Enthusiast | Firmware Engineer</p>
+                <div class="social-links">
+                    <a href="https://github.com/amaldits" target="_blank">→</a>
+                    <a href="https://www.linkedin.com/in/amaldits/" target="_blank">in</a>
+                    <a href="#" title="Download CV">↓</a>
+                </div>
+            </div>
+            <!-- <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Tech Background">
+            </div> -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Profile">
+            </div>
+            <div class="about-text">
+                <p>I'm Tyan, an Electrical Engineering graduate from Institut Teknologi Bandung with a deep passion for IoT and robotics technology. My academic journey culminated in a thesis focused on unmanned aerial vehicles, which sparked my enthusiasm for autonomous systems.</p>
+                <p>With over four years of hands-on experience, I specialize in firmware development for embedded systems. I've worked on innovative projects ranging from agricultural IoT devices to autonomous vehicles, consistently pushing the boundaries of what's possible in connected technology.</p>
+                <p>I'm committed to staying at the forefront of technological advancement and eager to tackle new challenges that combine hardware, software, and intelligent systems to create meaningful impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey">
+        <h2 class="section-title">My <span>Journey</span></h2>
+        <div class="journey-container">
+            <div class="journey-column">
+                <h3>Experience</h3>
+                <div class="journey-item">
+                    <div class="year">📅 Mar 2022 - Sep 2023</div>
+                    <h4>Firmware Engineer</h4>
+                    <p>PT. Aria Agri Indonesia</p>
+                    <p>Developed IoT devices for agricultural applications</p>
+                </div>
+                <div class="journey-item">
+                    <div class="year">📅 Aug 2021 - Oct 2021</div>
+                    <h4>Firmware Engineer Intern</h4>
+                    <p>PT. Movus Technologies Indonesia</p>
+                    <p>Created tracking devices for vehicle monitoring</p>
+                </div>
+                <div class="journey-item">
+                    <div class="year">📅 May 2019 - Aug 2019</div>
+                    <h4>Engineer Intern</h4>
+                    <p>PT. IROSTech Solusi Intelegen</p>
+                    <p>Designed smart home prototypes for education</p>
+                </div>
+            </div>
+            <div class="journey-column">
+                <h3>Education</h3>
+                <div class="journey-item">
+                    <div class="year">🎓 2016 - 2021</div>
+                    <h4>Bachelor of Electrical Engineering</h4>
+                    <p>Institut Teknologi Bandung</p>
+                    <p>Thesis: Visual Investigation of Bridge Damage Using Autonomous Drone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600" alt="Drone">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Unmanned Aerial Vehicle</h3>
+                    <p>Developed a semi-autonomous UAV for bridge inspection with computer vision capabilities and automated flight patterns.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">ROS</span>
+                        <span class="tech-tag">PX4</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" alt="Tram">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Autonomous Tram</h3>
+                    <p>ITB-INKA collaboration project integrating multiple sensors and NVIDIA DRIVE AGX for autonomous tram operation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">Sensor Fusion</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600" alt="Forklift">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Autonomous Forklift</h3>
+                    <p>Indoor autonomous navigation system using LIDAR and HectorSLAM for warehouse automation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ROS</span>
+                        <span class="tech-tag">SLAM</span>
+                        <span class="tech-tag">Kalman Filter</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600" alt="IoT">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Worker Tracker</h3>
+                    <p>Wearable IoT device for tracking field workers in agricultural settings with web-based visualization platform.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">GPS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Tractor">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Turbo Spreader</h3>
+                    <p>Tractor tracking system for monitoring fertilizer distribution in palm oil plantations with data analytics.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600" alt="Robot">
+                    <div class="project-overlay">View Details</div>
+                </div>
+                <div class="project-content">
+                    <h3>Humanoid Robot Soccer</h3>
+                    <p>Competition robot with 20 servos, computer vision, and coordinated multi-robot gameplay capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">ROS</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Robotics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2025 by Amaldi Tri Septyanto | All Rights Reserved.</p>
+    </footer>
+
+    <div class="scroll-top" id="scrollTop" onclick="scrollToSection('home')">
+        ↑
+    </div>
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const scrollTop = document.getElementById('scrollTop');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                scrollTop.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                scrollTop.classList.remove('visible');
+            }
+
+            // Active nav link
+            const sections = ['home', 'about', 'journey', 'projects'];
+            const navLinks = document.querySelectorAll('nav a');
+            
+            sections.forEach((section, index) => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[index].classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.journey-item, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
