@@ -1368,6 +1368,33 @@ span {
   animation: bounceIcon 1.2s infinite;
 }
 
+.project-detail-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-section h3 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-detail-section h3::before {
+  content: '▸';
+  color: var(--main-color);
+  font-size: 2.5rem;
+}
+
 @keyframes bounceIcon {
   0%, 100% {
     transform: translateY(0);

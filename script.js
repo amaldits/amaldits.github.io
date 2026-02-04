@@ -271,7 +271,6 @@ function openProjectDetail(projectId) {
         ${descriptionHTML}
       </div>
       <div class="project-detail-section">
-        <h3>Technologies Used</h3>
         <div class="project-tech">
           ${techHTML}
         </div>
