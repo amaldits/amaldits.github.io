@@ -245,9 +245,11 @@ function openProjectDetail(projectId) {
   if (!project) return;
   
   // Build modal content
-  let imagesHTML = project.images.map(img => 
+  let imagesHTML = `<div class="project-detail-images">` +
+  project.images.map(img => 
     `<img src="${img}" alt="${project.title}" class="project-detail-image">`
-  ).join('');
+  ).join('') +
+  `</div>`;
   
   let techHTML = project.tech.map(tech => 
     `<span class="tech-badge">${tech}</span>`

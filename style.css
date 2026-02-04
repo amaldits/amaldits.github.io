@@ -917,7 +917,7 @@ span {
 }
 
 /* Hide scroll hint on hover */
-.timeline-wrapper:hover .scroll-hint-projects {
+.timeline-wrapper:hover .scroll-hint {
   opacity: 0 !important;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -1036,7 +1036,7 @@ span {
 .modal-content {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px;
   max-height: 90vh;
   background: var(--bg-color);
   border-radius: 20px;
@@ -1044,6 +1044,51 @@ span {
   overflow: hidden;
   animation: slideUp 0.4s ease;
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+}
+
+.project-detail-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+/* First two images - half width each */
+.project-detail-image:nth-child(1),
+.project-detail-image:nth-child(2) {
+  width: calc(50% - 1rem);
+  max-height: 400px;
+}
+
+/* Images after first 2 - centered, smaller */
+.project-detail-image:nth-child(n+3) {
+  width: 60%;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+/* All images styling */
+.project-detail-image {
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* If only 1 image - full width centered */
+.project-detail-images:has(.project-detail-image:only-child) .project-detail-image {
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Responsive - stack on mobile */
+@media (max-width: 768px) {
+  .project-detail-image:nth-child(1),
+  .project-detail-image:nth-child(2),
+  .project-detail-image:nth-child(n+3) {
+    width: 100% !important;
+  }
 }
 
 @keyframes slideUp {
@@ -1366,17 +1411,6 @@ span {
   font-size: 5rem;
   color: white;
   animation: bounceIcon 1.2s infinite;
-}
-
-.project-detail-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 15px;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-detail-section h3 {
