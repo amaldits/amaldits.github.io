@@ -180,14 +180,13 @@
         <div class="timeline-wrapper">
           <div class="timeline-container">
             <!-- Experience 1 (current) - CLICKABLE -->
-            <div class="timeline-item experience current" onclick="openProjectModal()" style="cursor: pointer">
+            <div class="timeline-item experience current" onclick="openProjectModal('miota')" style="cursor: pointer">
               <div class="timeline-badge"><i class="bx bxs-briefcase"></i></div>
               <div class="timeline-content">
                 <div class="year"><i class="bx bxs-calendar"></i>Dec 2023 - Present</div>
                 <h4>Fullstack IoT Engineer</h4>
                 <p class="institution">PT. Miota International Teknologi</p>
                 <p class="description">Developing end-to-end IoT solutions</p>
-                <!-- <span class="click-hint"><i class="bx bx-link-external"></i> View Projects</span> -->
               </div>
             </div>
             
@@ -195,7 +194,7 @@
             <div class="timeline-connector"></div>
             
             <!-- Experience 2 -->
-            <div class="timeline-item experience">
+            <div class="timeline-item experience" onclick="openProjectModal('aria')" style="cursor: pointer">
               <div class="timeline-badge"><i class="bx bxs-briefcase"></i></div>
               <div class="timeline-content">
                 <div class="year"><i class="bx bxs-calendar"></i>Mar 2022 - Sep 2023</div>
@@ -344,6 +343,59 @@
       </div>
     </div>
     
+    <div class="project-modal" id="projectModal">
+    <div class="modal-overlay" onclick="closeAriaAgriModal()"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Projects at PT. Aria Agri Indonesia</h2>
+        <button class="modal-close" onclick="closeProjectModal()">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="project-list">
+          <!-- Project 1: Worker Tracker -->
+          <div class="project-item">
+            <div class="project-icon">
+              <i class="bx bxs-chip"></i>
+            </div>
+            <div class="project-info">
+              <h4>Worker Tracker</h4>
+              <p class="project-date">Mar 2022 - Sep 2023</p>
+              <p class="project-desc">Wearable IoT device for tracking field workers' footprints in oil palm fields. Data visualized through web-based application for stakeholder decision-making.</p>
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">GPS</span>
+                <span class="tech-tag">Wi-Fi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Turbo Spreader -->
+          <div class="project-item">
+            <div class="project-icon">
+              <i class="bx bxs-devices"></i>
+            </div>
+            <div class="project-info">
+              <h4>Turbo Spreader</h4>
+              <p class="project-date">Mar 2022 - Sep 2023</p>
+              <p class="project-desc">Tractor tracking system for monitoring fertilizer distribution in oil palm fields. Tracks fertilizer usage, detects excess application, and monitors tractor travel distance.</p>
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
     <section class="projects" id="project">
       <div class="container">
         <h2 class="heading">featured <span>Projects</span></h2>
@@ -351,7 +403,28 @@
         <div class="projects-wrapper">
           <div class="projects-container">
             
-            <!-- Project 1: Unmanned Aerial Vehicle -->
+            <!-- Project 1: Oil Palm Fruit Sortation Machine -->
+            <div class="project-card" onclick="openProjectDetail('sawit')">
+              <div class="project-image">
+                <img src="mesin sawit 1.jpeg" alt="mesin sawit">
+                <div class="project-overlay">
+                  <i class="bx bx-search-alt"></i>
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Oil Palm Fruit Sortation Machine</h3>
+                <p>A machine to automatically sort oil palm fruits designed computer vision-based system according to their ripeness, improving accuracy, efficiency, and consistency in the grading process.</p>
+                <div class="project-tech">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">C++</span>
+                  <span class="tech-badge">Machine Learning</span>
+                  <span class="tech-badge">Computer Vision</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Unmanned Aerial Vehicle -->
             <div class="project-card" onclick="openProjectDetail('uav')">
               <div class="project-image">
                 <img src="drone.jpg" alt="Unmanned Aerial Vehicle">
@@ -373,7 +446,7 @@
               </div>
             </div>
 
-            <!-- Project 2: Autonomous Tram -->
+            <!-- Project 3: Autonomous Tram -->
             <div class="project-card" onclick="openProjectDetail('tram')">
               <div class="project-image">
                 <img src="tram_assets/tram_inka_1.jpg" alt="Autonomous Tram">
@@ -394,7 +467,7 @@
               </div>
             </div>
 
-            <!-- Project 3: Autonomous Forklift -->
+            <!-- Project 4: Autonomous Forklift -->
             <div class="project-card" onclick="openProjectDetail('forklift')">
               <div class="project-image">
                 <img src="forklift_assets/forklift2.jpeg" alt="Autonomous Forklift">
@@ -415,8 +488,8 @@
               </div>
             </div>
 
-            <!-- Project 4: Worker Tracker -->
-            <div class="project-card" onclick="openProjectDetail('worker')">
+            <!-- Project 5: Worker Tracker -->
+            <!-- <div class="project-card" onclick="openProjectDetail('worker')">
               <div class="project-image">
                 <img src="wt.PNG" alt="Worker Tracker">
                 <div class="project-overlay">
@@ -434,10 +507,10 @@
                   <span class="tech-badge">GPS</span>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <!-- Project 5: Turbo Spreader -->
-            <div class="project-card" onclick="openProjectDetail('turbo')">
+            <!-- Project 6: Turbo Spreader -->
+            <!-- <div class="project-card" onclick="openProjectDetail('turbo')">
               <div class="project-image">
                 <img src="tractor_assets/tractor2.jpeg" alt="Turbo Spreader">
                 <div class="project-overlay">
@@ -454,9 +527,9 @@
                   <span class="tech-badge">Data Analytics</span>
                 </div>
               </div>
-            </div>
+            </div> -->
 
-            <!-- Project 6: Humanoid Robot Soccer -->
+            <!-- Project 7: Humanoid Robot Soccer -->
             <div class="project-card" onclick="openProjectDetail('humanoid')">
               <div class="project-image">
                 <img src="humanoid_1.PNG" alt="Humanoid Robot">
@@ -496,358 +569,6 @@
       </div>
     </div>
 
-    <!-- <section class="project" id="project">
-      <h2 class="heading">my <span>Project</span></h2>
-      <div class="container">
-        <div class="row"> -->
-          <!-- Unmanned Aerial Vehicle -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
-              <img src="drone_small.jpg" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Unmanned Aerial Vehicle</h5>
-                <p class="card-text mb-4 fs-4">When I was working on my thesis, the project I was working on was making a UAV with the mission of carrying out inspections under bridges...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop1" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Unmanned Aerial Vehicle</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-md-6 fs-3"><img src="drone.jpg" class="card-img-top" alt="Card Image" /></div>
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          When I was in college working on my final thesis, I worked on a project related to UAVs (Unmanned Aerial Vehicles. The mission of this vehicle is to carry out inspections on bridges with as little human influence
-                          as possible (semi-autonomous).
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          Previously, the bridge must have a sensor that provides position, and status. So, if the bridge having trouble, the sensor will send a signal to GCS (Ground Control Station). The drone will receive the signal. If
-                          the condition is possible to do an inspection, the drone will take off with operator validation. The drone flies with a pattern depending on what situation the bridge has and takes video or image data for the
-                          surveyor or whoever wants to use the data. If the mission is done, the drone will fly to GCS.
-                        </p>
-                      </div>
-                      <div class="col-md-6 fs-3"><img src="output.gif" class="card-img-top" alt="..." /></div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center mb-0" style="font-size: 7.5rem">
-                        <i class="bx bxl-python"></i>
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="https://www.vectorlogo.zone/logos/ros/ros-ar21.svg" alt="" style="position: relative; width: 150px" />
-                        <img src="/Px4 media kit/PX4_logo_black.jpg" alt="" style="position: relative; width: 150px" />
-                      </p>
-                    </div>
-                    <div class="row">
-                      <p class="text-center" style="font-size: 7.5rem">
-                        <img src="linux.png" alt="" style="position: relative; width: 80px" />
-                        <img src="opencv.png" alt="" style="position: relative; width: 80px" />
-                        <img src="pytorch.png" alt="" style="position: relative; width: 200px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- Autonomous Tram -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-              <img src="tram_assets/tram_inka_1.jpg" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Autonomous Tram</h5>
-                <p class="card-text mb-4 fs-4">This project is a collaboration between ITB (Institut Teknologi Bandung), INKA (Industri Kereta Api), riset.ai, and LPDP (Lembaga Pengelo...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop2" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Autonomous Tram</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <p class="text-center"><img src="tram_assets/tram_inka_1.jpg" class="card-img-center" alt="Card Image" style="width: 400px; height: auto" /></p>
-                    </div> -->
-                    <!-- <div class="row">
-                      <div class="col-md-6 fs-3"><img src="tram_assets/tram2.jpg" class="card-img-top" alt="Card Image" /></div>
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          This project is a collaboration between ITB (Institut Teknologi Bandung), INKA (Industri Kereta Api), riset.ai, and LPDP (Lembaga Pengelola Dana Pendidikan) which aims to create a tram that can run autonomously.
-                        </p>
-                      </div>
-                    </div> -->
-                    <!-- <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          This project is a collaboration between ITB (Institut Teknologi Bandung), INKA (Industri Kereta Api), riset.ai, and LPDP (Lembaga Pengelola Dana Pendidikan) which aims to create a tram that can run autonomously. To
-                          assist it in running autonomously, the Tram has 9 cameras, a LIDAR, 2 RADAR, a GNSS, and an IMU. All the sensors communicate with the tram’s NVIDIA DRIVE AGX embedded computer which interfaces with the tram’s PLC.
-                          In this project, I was responsible for integrating the tram’s hardware system from power distribution to how the sensor data can be used to be processed after.
-                        </p>
-                      </div>
-                      <div class="col-md-6 fs-3"><img src="tram_assets/tram_hardware_2.jpeg" class="card-img-top" alt="..." /></div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center mb-0" style="font-size: 7.5rem">
-                        <i class="bx bxl-python"></i>
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="linux.png" alt="" style="position: relative; width: 80px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- Autonomous Forklift -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
-              <img src="forklift_assets/forklift2.jpeg" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Autonomous Forklift</h5>
-                <p class="card-text mb-4 fs-4">This project is a collaboration between ITB (Institut Teknologi Bandung), and CPIN (Charoen Pokphand Indonesia Tbk) which aims to create ...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop3" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Autonomous Forklift</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-md-6 fs-3"><img src="forklift_assets/forklift.PNG" class="card-img-top" alt="Card Image" /></div>
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          This project is a collaboration between ITB (Institut Teknologi Bandung), and CPIN (Charoen Pokphand Indonesia Tbk) which aims to create a forklift that can run autonomously, and locate itself in the indoor
-                          facility. The forklift has a LIDAR, and an IMU, which communicate to a mini PC.
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          My role in creating an autonomous forklift is to integrate all the sensors and serve the data so the data can be used on all the methods.
-                          <br />
-                          <br />
-                          2 sensors generate data. The data that needs to be filtered. We filter using Kalman Filter. Those data are needed for implementing HectorSLAM so the forklift can map the warehouse and locate itself, so it can
-                          automate to carry a load, sign the destination, and drive to the location based on the map before, taking the load on its location, and back to home point.
-                        </p>
-                      </div>
-                      <div class="col-md-6 fs-3"><img src="forklift_assets/forklift_map.png" class="card-img-top" alt="..." /></div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center" style="font-size: 7.5rem">
-                        <i class="bx bxl-python"></i>
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="https://www.vectorlogo.zone/logos/ros/ros-ar21.svg" alt="" style="position: relative; bottom: 10px; width: 150px" />
-                        <img src="linux.png" alt="" style="position: relative; bottom: 10px; width: 80px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- --- --- --- --- --- -->
-        <!-- <div class="row"> -->
-          <!-- Worker Tracker -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
-              <img src="wt.PNG" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Worker Tracker</h5>
-                <p class="card-text mb-4 fs-4">Worker Tracker is a supporting device for tracking field workers in oil palm fields the data can be visualized by a web-based application...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop4" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Worker Tracker</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-md-6 fs-3"><img src="wt.PNG" class="card-img-top" alt="Card Image" /></div>
-                      <div class="col-md-6 fs-3">
-                        <p class="fs-4 text-start">
-                          Worker Tracker is a supporting device for tracking field workers' footprints in oil palm fields. The data can be visualized by a web-based application. We can check the region that must be completed on that day
-                          from the footprint data. Then, stakeholders or users can make decisions about what should be done by tomorrow, so this app can help users minimize the error, and increase certainty about the decision itself.
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center"><img src="worker_tracker_data_platform.PNG" class="card-img-top" alt="Card Image" style="height: 200px; width: auto" /></p>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3">
-                        <p class="text-center"><img src="worker_tracker_worker.PNG" class="card-img-top" alt="Card Image" style="height: 400px; width: auto" /></p>
-                      </div>
-                      <div class="col-md-6 fs-3">
-                        <p class="fs-4 text-start">
-                          Worker Tracker is a wearable device. It is placed at human hips with a small compartment designed just for Worker Tracker. It doesn’t have any input interface, the interface includes an LED, which shows the status
-                          Worker Tracker has, and a USB Type-C, which charges the Worker Tracker and sends the data through Wi-Fi to the nearest Access Point at once.
-                          <br />
-                          <br />
-                          In this project, I was working on the firmware side, which involved creating and designing the firmware, trial, and error the new features assigned by the project manager, and debugging the code if there were some
-                          bugs that needed to be fixed.
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center mb-0" style="font-size: 7.5rem">
-                        <i class="bx bxl-python"></i>
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="arduino.png" alt="" style="height: 50px; width: auto; margin-bottom: 30px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- Turbo Spreader -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
-              <img src="tractor_assets/tractor2.jpeg" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Turbo Spreader</h5>
-                <p class="card-text mb-4 fs-4">Turbo Spreader is a supporting device for tractor spreader tracking activity in oil palm fields so the data can be monitored with a web-b...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop5" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Turbo Spreader</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-md-6 fs-3"><img src="tractor_assets/tractor2.jpeg" class="card-img-top" alt="Card Image" /></div>
-                      <div class="col-md-6 fs-3">
-                        <p class="fs-4 text-start">
-                          Turbo Spreader is a supporting device for tractor spreader tracking activity in oil palm fields. Turbo Spreader is exactly like Worker Tracker, the difference is the object that needs to be tracked. Based on data
-                          served in a web-based application, we can check how much fertilizer that used on that day, check if there are some regions where excess fertilizers, and check how far the tractor was driven on that day.
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3">
-                        <p class="fs-4 text-start">
-                          Turbo Spreader is a supporting device for tractor spreader tracking activity in oil palm fields. Turbo Spreader is exactly like Worker Tracker, the difference is the object that needs to be tracked. Based on data
-                          served in a web-based application, we can check how much fertilizer that used on that day, check if there are some regions where excess fertilizers, and check how far the tractor was driven on that day.
-                        </p>
-                      </div>
-                      <div class="col-md-6 fs-3">
-                        <p class="text-center"><img src="tractor_assets/tractor_turbo_spreader.png" class="card-img-top" alt="Card Image" style="height: 200px; width: auto" /></p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="fs-4 text-start">In this project, I was working on the firmware side, which involved supporting to creating, designing, and debugging of all related to firmware.</p>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center mb-0" style="font-size: 7.5rem">
-                        <i class="bx bxl-python"></i>
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="arduino.png" alt="" style="height: 50px; width: auto; margin-bottom: 30px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- Humanoid Robo Soccer -->
-          <!-- <div class="col-lg-4 mb-3 d-flex align-items-stretch">
-            <div class="card" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
-              <img src="humanoid_1.PNG" class="card-img-top" alt="Card Image" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fs-3">Humanoid Robo Soccer</h5>
-                <p class="card-text mb-4 fs-4">This project is intended to take part in a competition, Kontes Robot Sepak Bola - Humanoid (KRSBI-H). The robot will walk, kick, and coor...</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="staticBackdrop6" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <div class="modal-content" style="color: black">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-1" id="staticBackdropLabel">Humanoid Robo Soccer</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-md-6 fs-3"><img src="humanoid.gif" class="card-img-top" alt="" /></div>
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          This project is intended to take part in a competition, Kontes Robot Sepak Bola - Humanoid (KRSBI-H). The robot will walk, kick, and coordinate with another robot making a pass. The humanoid robot has 20 servos and
-                          every servo communicates with each other using RS485/TTL. All servos are assembled and connected electrically to a sub-controller, CM730. This sub-controller is used for “translate” the high-level code so we can
-                          generate a move.
-                        </p>
-                      </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <div class="col-md-6 fs-3 d-flex justify-content-between">
-                        <p class="fs-4 text-start">
-                          This robot also has a camera and mini PC. Mini PC as a main controller generates commands based on what it detects an object with the camera such as a ball, goalpost, straight line, and round circle. In this
-                          project, I was working on maintaining the electrical part and creating the electrical part to support the robot to make it easier to use. I created an interface to simplify creating strategy before the game starts.
-                        </p>
-                      </div>
-                      <div class="col-md-6 fs-3"><img src="humanoid2.gif" class="card-img-top" alt="" /></div>
-                    </div>
-                    <br />
-                    <div class="row">
-                      <p class="text-center" style="font-size: 7.5rem">
-                        <i class="bx bxl-c-plus-plus"></i>
-                        <img src="arduino.png" alt="arduino" style="height: 50px; width: auto; margin-bottom: 30px" />
-                        <img src="opencv.png" alt="opencv" style="position: relative; width: 80px; margin-bottom: 30px" />
-                        <img src="linux.png" alt="linux" style="position: relative; width: 80px; margin-bottom: 30px" />
-                        <img src="https://www.vectorlogo.zone/logos/ros/ros-ar21.svg" alt="ros" style="position: relative; width: 150px; margin-bottom: 30px" />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    
     <footer class="footer">
       <div class="footer-text">
         <p>Copyright &copy; 2026 by Amaldi Tri Septyanto | All Rights Reserved.</p>
