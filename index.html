@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <!-- <meta name="viewport" content="width-device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Amaldi Tri Septyanto - Robotics and embedded systems engineer working on guidance, navigation and control for UAVs and autonomous ground systems. ROS2, PX4, Gazebo, C++, embedded Linux." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -19,7 +20,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Amaldi Tri Septyanto Portfolio</title>
+    <title>Amaldi Tri Septyanto | Robotics Engineer - Guidance, Navigation &amp; Control</title>
   </head>
 
   <script>
@@ -47,8 +48,9 @@
       <nav class="navbar">
         <a onclick="scrollToSection('home')" style="--i: 1; cursor: pointer" class="active">home</a>
         <a onclick="scrollToSection('about')" style="--i: 2; cursor: pointer">about</a>
-        <a onclick="scrollToSection('journey')" style="--i: 3; cursor: pointer">journey</a>
-        <a onclick="scrollToSection('project')" style="--i: 4; cursor: pointer">project</a>
+        <a onclick="scrollToSection('skills')" style="--i: 3; cursor: pointer">skills</a>
+        <a onclick="scrollToSection('journey')" style="--i: 4; cursor: pointer">journey</a>
+        <a onclick="scrollToSection('project')" style="--i: 5; cursor: pointer">project</a>
       </nav>
     </header>
 
@@ -58,12 +60,13 @@
         <!-- <h3>Portfolio of <span style="color: var(--main-color);">Amaldi Tri Septyanto</span> | IoT and Robotics Enthusiast</h3> -->
         <h3>Portfolio of</h3>
         <h1>Amaldi Tri Septyanto</h1>
-        <p>IoT and Robotics Enthusiast</p>
+        <p>Robotics &amp; Embedded Systems Engineer</p>
+        <p class="home-focus">Guidance, Navigation &amp; Control &middot; Autonomous Systems &middot; Embedded Linux</p>
 
         <div class="home-sci">
           <a style="--i: 5" target="_blank" rel="noopener" href="https://github.com/amaldits"><i class="bx bxl-github"></i></a>
           <a style="--i: 6" target="_blank" rel="noopener" href="https://www.linkedin.com/in/amaldits/"><i class="bx bxl-linkedin"></i></a>
-          <a style="--i: 7" href="/Resume - Amaldi Tri Septyanto.pdf" title="download my cv here!!" download=""><i class="bx bxs-download"></i></a>
+          <!-- <a style="--i: 7" href="Amaldi_Tri_Septyanto_CV_TII_GNC.pdf" title="download my cv here!!" download=""><i class="bx bxs-download"></i></a> -->
         </div>
       </div>
     </section>
@@ -85,19 +88,23 @@
               </p> -->
               
               <p>
-                I'm Tyan, an Electrical Engineering graduate from Institut Teknologi Bandung with a deep interest in IoT and robotics. 
-                My bachelor's thesis focused on autonomous drones for bridge inspection, which sparked my passion for autonomous systems.
+                I'm Tyan, a robotics and embedded systems engineer with over four years of experience across autonomous aerial and ground systems, embedded control, and
+                industrial deployment. I hold a bachelor's degree in Electrical Engineering from Institut Teknologi Bandung, where my thesis built an autonomous drone for
+                bridge structural inspection &mdash; the work that pulled me into autonomy for good.
               </p>
               <p>
-                I've spent over four years developing firmware for embedded systems, working on projects ranging from agricultural IoT devices to autonomous vehicles.
-                I specialize in sensor integration, real-time systems, and hardware-software interfaces.
+                I work on guidance, navigation, and control end to end: prototyping the algorithm, implementing it in ROS2 and C++, and validating it in PX4 and Gazebo
+                before it ever touches hardware. That includes waypoint navigation, local obstacle avoidance, probabilistic localization with AMCL, and state
+                estimation from GNSS, IMU, and LiDAR.
               </p>
               <p>
-                What drives me is solving real-world problems through technology.
-                Whether it's optimizing warehouse automation or tracking systems for agriculture, I enjoy taking complex challenges and turning them into practical solutions.
+                Alongside the research side, I ship production firmware that has to survive the field. I've brought up custom embedded Linux on single-board computers,
+                written Go and C/C++ for edge RTUs monitoring rivers at mining sites, and led a fertigation control rollout across 26 locations for the Johor Government.
+                Deterministic execution, watchdogs, and local failover are not abstractions to me &mdash; they are what keeps a deployment alive when the network drops.
               </p>
               <p>
-                I'm always looking for opportunities to work on innovative projects that combine hardware, software, and intelligent systems.
+                I care about the engineering discipline as much as the algorithm: version control, code review, containerized builds, and documentation clear enough that
+                the next person can pick it up. I'm looking for work where control theory, clean software, and real hardware meet.
               </p>
 
               <!-- <p>
@@ -114,6 +121,120 @@
             <div class="about-img">
               <img src="home.jpeg" alt="" />
               <span class="circle-spin"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="heading">technical <span>Skills</span></h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bx-target-lock"></i>
+              <h3>GNC &amp; Autonomy</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Path &amp; Trajectory Planning</span>
+              <span class="skill-tag">Potential Fields</span>
+              <span class="skill-tag">Obstacle Avoidance</span>
+              <span class="skill-tag">Waypoint Navigation</span>
+              <span class="skill-tag">PID Control</span>
+              <span class="skill-tag">State-Feedback Control</span>
+              <span class="skill-tag">AMCL</span>
+              <span class="skill-tag">Sensor Fusion</span>
+              <span class="skill-tag">State Estimation</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bx-cube-alt"></i>
+              <h3>Robotics Frameworks</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ROS</span>
+              <span class="skill-tag">ROS2 Humble</span>
+              <span class="skill-tag">Gazebo Harmonic</span>
+              <span class="skill-tag">RViz2</span>
+              <span class="skill-tag">PX4 Autopilot</span>
+              <span class="skill-tag">ArduPilot</span>
+              <span class="skill-tag">Pixhawk</span>
+              <span class="skill-tag">MAVLink</span>
+              <span class="skill-tag">Offboard Control</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bx-code-alt"></i>
+              <h3>Programming</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">Go</span>
+              <span class="skill-tag">Object-Oriented Design</span>
+              <span class="skill-tag">Real-Time Embedded Design</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bx-git-branch"></i>
+              <h3>Software Engineering</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Code Review</span>
+              <span class="skill-tag">Unit Testing</span>
+              <span class="skill-tag">CI Pipelines</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Agile / Scrum</span>
+              <span class="skill-tag">Jira</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bx-radar"></i>
+              <h3>Sensors &amp; Perception</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">GNSS / RTK GPS</span>
+              <span class="skill-tag">IMU</span>
+              <span class="skill-tag">LiDAR &amp; Point Clouds</span>
+              <span class="skill-tag">Encoders</span>
+              <span class="skill-tag">Cameras</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">ML Classification</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <i class="bx bxs-chip"></i>
+              <h3>Embedded &amp; Real-Time</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Embedded Linux</span>
+              <span class="skill-tag">Device Trees</span>
+              <span class="skill-tag">Kernel Modules</span>
+              <span class="skill-tag">ESP32</span>
+              <span class="skill-tag">STM32</span>
+              <span class="skill-tag">FreeRTOS</span>
+              <span class="skill-tag">CAN</span>
+              <span class="skill-tag">Modbus RTU/TCP</span>
+              <span class="skill-tag">MQTT</span>
+              <span class="skill-tag">UART / SPI / I2C</span>
+              <span class="skill-tag">Watchdogs</span>
+              <span class="skill-tag">OTA</span>
             </div>
           </div>
         </div>
@@ -183,10 +304,10 @@
             <div class="timeline-item experience current" onclick="openProjectModal('miota')" style="cursor: pointer">
               <div class="timeline-badge"><i class="bx bxs-briefcase"></i></div>
               <div class="timeline-content">
-                <div class="year"><i class="bx bxs-calendar"></i>Dec 2023 - Present</div>
-                <h4>Fullstack IoT Engineer</h4>
+                <div class="year"><i class="bx bxs-calendar"></i>Dec 2023 - Jun 2026</div>
+                <h4>Full-Stack IoT / Embedded Systems Engineer</h4>
                 <p class="institution">PT. Miota International Teknologi</p>
-                <p class="description">Developing end-to-end IoT solutions</p>
+                <p class="description">Embedded Linux RTU bring-up, Go edge firmware, RTK GNSS positioning</p>
               </div>
             </div>
             
@@ -216,9 +337,22 @@
                 <p class="description">Developed tracking devices to monitor car status</p>
               </div>
             </div>
-            
+
             <div class="timeline-connector"></div>
-            
+
+            <!-- Research Assistantships (ITB) -->
+            <div class="timeline-item experience" onclick="openProjectModal('itb')" style="cursor: pointer">
+              <div class="timeline-badge"><i class="bx bxs-flask"></i></div>
+              <div class="timeline-content">
+                <div class="year"><i class="bx bxs-calendar"></i>Sep 2020 - Apr 2022</div>
+                <h4>Research Assistant</h4>
+                <p class="institution">Laboratory of Advanced Robotics, Institut Teknologi Bandung</p>
+                <p class="description">Autonomous drone, forklift localization, and autonomous tram research</p>
+              </div>
+            </div>
+
+            <div class="timeline-connector"></div>
+
             <!-- Experience 4 -->
             <div class="timeline-item experience">
               <div class="timeline-badge"><i class="bx bxs-briefcase"></i></div>
@@ -254,147 +388,11 @@
       </div>
     </section>
 
-    <!-- Modal for Current Job Projects -->
+    <!-- Company projects modal - content is rendered by openProjectModal() in script.js -->
     <div class="project-modal" id="projectModal">
       <div class="modal-overlay" onclick="closeProjectModal()"></div>
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Projects at PT. Miota International Teknologi</h2>
-          <button class="modal-close" onclick="closeProjectModal()">
-            <i class="bx bx-x"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="project-list">
-            <!-- Project 1: Container -->
-            <div class="project-item">
-              <div class="project-icon">
-                <i class="bx bxs-chip"></i>
-              </div>
-              <div class="project-info">
-                <h4>IoT Asset Management System</h4>
-                <p class="project-desc">Developed end-to-end IoT solution for container asset with real-time tracking position dashboard</p>
-                <div class="project-tech">
-                  <span class="tech-tag">ESP32</span>
-                  <span class="tech-tag">C++</span>
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">.NET</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2: RTU -->
-            <div class="project-item">
-              <div class="project-icon">
-                <i class="bx bxs-server"></i>
-              </div>
-              <div class="project-info">
-                <h4>Remote Terminal Unit (RTU)</h4>
-                <p class="project-desc">Developed an in-house Remote Terminal Unit (RTU) to support IoT company operations, enhancing system reliability, and operational efficiency</p>
-                <div class="project-tech">
-                  <span class="tech-tag">Linux</span>
-                  <span class="tech-tag">OpenWrt</span>
-                  <span class="tech-tag">C</span>
-                  <span class="tech-tag">Go</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3: AWLR -->
-            <div class="project-item">
-              <div class="project-icon">
-                <i class="bx bxs-server"></i>
-              </div>
-              <div class="project-info">
-                <h4>Automatic Water Level Recording (AWLR)</h4>
-                <p class="project-desc">Implemented water level recording building system for monitoring purposes at remote area</p>
-                <div class="project-tech">
-                  <span class="tech-tag">Linux</span>
-                  <span class="tech-tag">OpenWrt</span>
-                  <span class="tech-tag">Go</span>
-                  <span class="tech-tag">MQTT</span>
-                  <span class="tech-tag">Modbus</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 4: Smartfarming -->
-            <div class="project-item">
-              <div class="project-icon">
-                <i class="bx bxs-devices"></i>
-              </div>
-              <div class="project-info">
-                <h4>Smartfarming</h4>
-                <p class="project-desc">Deployed a smart farming system for monitoring and control, incorporating automation capabilities to improve operational efficiency</p>
-                <div class="project-tech">
-                  <span class="tech-tag">Linux</span>
-                  <span class="tech-tag">OpenWrt</span>
-                  <span class="tech-tag">Go</span>
-                  <span class="tech-tag">MQTT</span>
-                  <span class="tech-tag">Modbus</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Add more projects as needed -->
-          </div>
-        </div>
-      </div>
+      <div class="modal-content"></div>
     </div>
-    
-    <div class="project-modal" id="projectModal">
-    <div class="modal-overlay" onclick="closeAriaAgriModal()"></div>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Projects at PT. Aria Agri Indonesia</h2>
-        <button class="modal-close" onclick="closeProjectModal()">
-          <i class="bx bx-x"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="project-list">
-          <!-- Project 1: Worker Tracker -->
-          <div class="project-item">
-            <div class="project-icon">
-              <i class="bx bxs-chip"></i>
-            </div>
-            <div class="project-info">
-              <h4>Worker Tracker</h4>
-              <p class="project-date">Mar 2022 - Sep 2023</p>
-              <p class="project-desc">Wearable IoT device for tracking field workers' footprints in oil palm fields. Data visualized through web-based application for stakeholder decision-making.</p>
-              <div class="project-tech">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">Arduino</span>
-                <span class="tech-tag">IoT</span>
-                <span class="tech-tag">GPS</span>
-                <span class="tech-tag">Wi-Fi</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2: Turbo Spreader -->
-          <div class="project-item">
-            <div class="project-icon">
-              <i class="bx bxs-devices"></i>
-            </div>
-            <div class="project-info">
-              <h4>Turbo Spreader</h4>
-              <p class="project-date">Mar 2022 - Sep 2023</p>
-              <p class="project-desc">Tractor tracking system for monitoring fertilizer distribution in oil palm fields. Tracks fertilizer usage, detects excess application, and monitors tractor travel distance.</p>
-              <div class="project-tech">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">Arduino</span>
-                <span class="tech-tag">IoT</span>
-                <span class="tech-tag">Data Analytics</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
     <section class="projects" id="project">
       <div class="container">
@@ -402,40 +400,43 @@
         
         <div class="projects-wrapper">
           <div class="projects-container">
-            
-            <!-- Project 1: Oil Palm Fruit Sortation Machine -->
-            <div class="project-card" onclick="openProjectDetail('sawit')">
-              <div class="project-image">
-                <img src="mesin sawit 1.jpeg" alt="mesin sawit">
+
+            <!-- Project 1: UAV Guidance & Navigation Stack (PX4 / ROS2 / Gazebo) -->
+            <!-- TODO: swap px4_logo_white.png for a Gazebo/RViz2 screenshot or demo GIF once the repo is public -->
+            <div class="project-card" onclick="openProjectDetail('gnc')">
+              <div class="project-image project-image-logo">
+                <img src="px4_logo_white.png" alt="UAV Guidance and Navigation Stack">
                 <div class="project-overlay">
                   <i class="bx bx-search-alt"></i>
                   <span>View Details</span>
                 </div>
               </div>
               <div class="project-content">
-                <h3>Oil Palm Fruit Sortation Machine</h3>
-                <p>A machine to automatically sort oil palm fruits designed computer vision-based system according to their ripeness, improving accuracy, efficiency, and consistency in the grading process.</p>
+                <h3>UAV Guidance &amp; Navigation Stack</h3>
+                <p>Offboard control and navigation stack in ROS2 Humble with PX4 SITL and Gazebo Harmonic &mdash; waypoint trajectory generation, potential-field local avoidance, and RViz2 inspection tooling.</p>
                 <div class="project-tech">
-                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">ROS2 Humble</span>
+                  <span class="tech-badge">PX4</span>
+                  <span class="tech-badge">Gazebo Harmonic</span>
                   <span class="tech-badge">C++</span>
-                  <span class="tech-badge">Machine Learning</span>
-                  <span class="tech-badge">Computer Vision</span>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">RViz2</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 2: Unmanned Aerial Vehicle -->
+            <!-- Project 2: Autonomous Drone for Bridge Inspection (thesis) -->
             <div class="project-card" onclick="openProjectDetail('uav')">
               <div class="project-image">
-                <img src="drone.jpg" alt="Unmanned Aerial Vehicle">
+                <img src="drone.jpg" alt="Autonomous Drone for Bridge Inspection">
                 <div class="project-overlay">
                   <i class="bx bx-search-alt"></i>
                   <span>View Details</span>
                 </div>
               </div>
               <div class="project-content">
-                <h3>Unmanned Aerial Vehicle</h3>
-                <p>Semi-autonomous UAV for bridge inspection with computer vision and automated flight patterns</p>
+                <h3>Autonomous Drone for Bridge Inspection</h3>
+                <p>Autonomous UAV platform integrating flight control, onboard perception, and mission architecture for automated structural survey of bridges.</p>
                 <div class="project-tech">
                   <span class="tech-badge">Python</span>
                   <span class="tech-badge">C++</span>
@@ -446,7 +447,30 @@
               </div>
             </div>
 
-            <!-- Project 3: Autonomous Tram -->
+            <!-- Project 3: Mobile Manipulator - ROS2 Port & RL Control -->
+            <!-- TODO: add a screenshot or training-curve image and replace the icon placeholder -->
+            <div class="project-card" onclick="openProjectDetail('manipulator')">
+              <div class="project-image project-image-placeholder">
+                <i class="bx bx-bot placeholder-icon"></i>
+                <div class="project-overlay">
+                  <i class="bx bx-search-alt"></i>
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Mobile Manipulator &mdash; ROS2 &amp; RL Control</h3>
+                <p>Porting a legacy ROS mobile-manipulator system to ROS2 and training a TD3 policy for learned navigation control, integrated back into the ROS2 control stack.</p>
+                <div class="project-tech">
+                  <span class="tech-badge">ROS2</span>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">PyTorch</span>
+                  <span class="tech-badge">TD3</span>
+                  <span class="tech-badge">Gazebo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: Autonomous Tram -->
             <div class="project-card" onclick="openProjectDetail('tram')">
               <div class="project-image">
                 <img src="tram_assets/tram_inka_1.jpg" alt="Autonomous Tram">
@@ -457,17 +481,19 @@
               </div>
               <div class="project-content">
                 <h3>Autonomous Tram</h3>
-                <p>ITB-INKA collaboration integrating sensors and NVIDIA DRIVE AGX for autonomous operation</p>
+                <p>ITB-INKA collaboration integrating GNSS, LiDAR, RADAR and cameras with an NVIDIA DRIVE AGX compute platform for autonomous operation.</p>
                 <div class="project-tech">
                   <span class="tech-badge">Python</span>
                   <span class="tech-badge">C++</span>
                   <span class="tech-badge">Linux</span>
-                  <span class="tech-badge">Sensor Fusion</span>
+                  <span class="tech-badge">GNSS</span>
+                  <span class="tech-badge">LiDAR</span>
+                  <span class="tech-badge">NVIDIA DRIVE AGX</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 4: Autonomous Forklift -->
+            <!-- Project 5: Autonomous Forklift -->
             <div class="project-card" onclick="openProjectDetail('forklift')">
               <div class="project-image">
                 <img src="forklift_assets/forklift2.jpeg" alt="Autonomous Forklift">
@@ -478,58 +504,18 @@
               </div>
               <div class="project-content">
                 <h3>Autonomous Forklift</h3>
-                <p>Indoor navigation system using LIDAR and HectorSLAM for warehouse automation</p>
+                <p>Indoor localization for warehouse automation &mdash; LiDAR and IMU fusion, HectorSLAM mapping, and AMCL localization in ROS and Gazebo.</p>
                 <div class="project-tech">
                   <span class="tech-badge">Python</span>
                   <span class="tech-badge">ROS</span>
                   <span class="tech-badge">SLAM</span>
+                  <span class="tech-badge">AMCL</span>
                   <span class="tech-badge">Kalman Filter</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 5: Worker Tracker -->
-            <!-- <div class="project-card" onclick="openProjectDetail('worker')">
-              <div class="project-image">
-                <img src="wt.PNG" alt="Worker Tracker">
-                <div class="project-overlay">
-                  <i class="bx bx-search-alt"></i>
-                  <span>View Details</span>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Worker Tracker</h3>
-                <p>Wearable IoT device for tracking field workers with web-based visualization platform</p>
-                <div class="project-tech">
-                  <span class="tech-badge">C++</span>
-                  <span class="tech-badge">Arduino</span>
-                  <span class="tech-badge">IoT</span>
-                  <span class="tech-badge">GPS</span>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Project 6: Turbo Spreader -->
-            <!-- <div class="project-card" onclick="openProjectDetail('turbo')">
-              <div class="project-image">
-                <img src="tractor_assets/tractor2.jpeg" alt="Turbo Spreader">
-                <div class="project-overlay">
-                  <i class="bx bx-search-alt"></i>
-                  <span>View Details</span>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Turbo Spreader</h3>
-                <p>Tractor tracking system for monitoring fertilizer distribution with data analytics</p>
-                <div class="project-tech">
-                  <span class="tech-badge">C++</span>
-                  <span class="tech-badge">Arduino</span>
-                  <span class="tech-badge">Data Analytics</span>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Project 7: Humanoid Robot Soccer -->
+            <!-- Project 6: Humanoid Robot Soccer -->
             <div class="project-card" onclick="openProjectDetail('humanoid')">
               <div class="project-image">
                 <img src="humanoid_1.PNG" alt="Humanoid Robot">
@@ -540,7 +526,7 @@
               </div>
               <div class="project-content">
                 <h3>Humanoid Robot Soccer</h3>
-                <p>Competition robot with computer vision and coordinated multi-robot gameplay</p>
+                <p>Competition robot with computer vision and coordinated multi-robot gameplay, built by a five-person electrical division I led.</p>
                 <div class="project-tech">
                   <span class="tech-badge">C++</span>
                   <span class="tech-badge">ROS</span>
@@ -549,6 +535,29 @@
                 </div>
               </div>
             </div>
+
+            <!-- Project 7: Oil Palm Fruit Sortation Machine -->
+            <div class="project-card" onclick="openProjectDetail('sawit')">
+              <div class="project-image">
+                <img src="mesin-sawit-1.jpeg" alt="Oil Palm Fruit Sortation Machine">
+                <div class="project-overlay">
+                  <i class="bx bx-search-alt"></i>
+                  <span>View Details</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Oil Palm Fruit Sortation Machine</h3>
+                <p>A machine that automatically sorts oil palm fruits by ripeness using a computer vision-based system, improving accuracy, efficiency, and consistency in the grading process.</p>
+                <div class="project-tech">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">C++</span>
+                  <span class="tech-badge">Machine Learning</span>
+                  <span class="tech-badge">Computer Vision</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Worker Tracker and Turbo Spreader are reachable from the Aria Agri timeline entry -->
 
           </div>
           

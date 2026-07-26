@@ -141,14 +141,14 @@ const companyProjects = {
       {
         icon: "bx bxs-server",
         title: "Remote Terminal Unit (RTU)",
-        description: "Developed an in-house Remote Terminal Unit (RTU) to support IoT company operations, enhancing system reliability, and operational efficiency",
+        description: "Developed an in-house Remote Terminal Unit (RTU) to support company IoT deployments, improving system reliability and operational efficiency",
         tech: ["Linux", "OpenWrt", "C", "Go"],
         detailId: "rtu" 
       },
       {
         icon: "bx bxs-server",
         title: "Automatic Water Level Recording (AWLR)",
-        description: "Implemented water level recording building system for monitoring purposes at remote area",
+        description: "Built an automatic water-level recording system for continuous monitoring at remote sites",
         tech: ["Linux", "OpenWrt", "Go", "MQTT", "Modbus"],
         detailId: "awlr"
       },
@@ -180,6 +180,36 @@ const companyProjects = {
         description: "Tractor tracking system for monitoring fertilizer distribution in oil palm fields. Tracks fertilizer usage, detects excess application, and monitors tractor travel distance.",
         tech: ["C++", "Arduino", "IoT", "Data Analytics"],
         detailId: "turbo" // ← Links to projectDetails['turbo']
+      }
+    ]
+  },
+
+  itb: {
+    title: "Research at Institut Teknologi Bandung",
+    projects: [
+      {
+        icon: "bx bxs-plane-alt",
+        title: "Autonomous Drone for Bridge Structural Inspection",
+        date: "Sep 2020 - Aug 2021",
+        description: "Autonomous UAV platform for bridge inspection at the Laboratory of Advanced Robotics, integrating flight control, onboard perception, and mission architecture. Documented as my undergraduate thesis.",
+        tech: ["Python", "C++", "ROS", "PX4", "OpenCV"],
+        detailId: "uav"
+      },
+      {
+        icon: "bx bxs-car-crash",
+        title: "Autonomous Forklift - Indoor Localization",
+        date: "Oct 2021 - Mar 2022",
+        description: "Researched and evaluated mobile-robot localization for an autonomous forklift operating in an indoor facility, and supported prototype firmware and system integration on a Raspberry Pi controller.",
+        tech: ["ROS", "Gazebo", "AMCL", "SLAM", "LiDAR"],
+        detailId: "forklift"
+      },
+      {
+        icon: "bx bxs-train",
+        title: "Autonomous Tram - Navigation Sensor Suite",
+        date: "Oct 2021 - Apr 2022",
+        description: "Multi-organization research program (ITB, INKA, riset.ai, LPDP). Built the GNSS and LiDAR data-logging program used for navigation and obstacle-detection development, and designed the first prototype onboard power system.",
+        tech: ["Python", "C++", "Linux", "GNSS", "LiDAR", "NVIDIA DRIVE AGX"],
+        detailId: "tram"
       }
     ]
   }
@@ -244,6 +274,35 @@ function closeProjectModal() {
 
 // ========== FEATURED PROJECTS DATA ========== //
 const projectDetails = {
+  gnc: {
+    title: "UAV Guidance & Navigation Stack",
+    image: "px4_logo_white.png",
+    description: [
+      "An offboard control and navigation stack I am building in ROS2 Humble against PX4 SITL and Gazebo Harmonic. The goal is to exercise the full GNC workflow the way it happens in production &mdash; prototype the algorithm, implement it in ROS2, and validate it in simulation before it touches an airframe.",
+      "The navigation layer generates waypoint trajectories that are consumed through the PX4 offboard control interface, with a potential-field method for local obstacle avoidance. Alongside it I built RViz2 visualization and keyboard teleoperation tooling so trajectories can be inspected, flight modes switched, and manual override taken during algorithm evaluation.",
+      "The codebase is structured as modular ROS2 packages under Git version control, keeping the navigation, control, and interface layers independently testable."
+    ],
+    images: [], // TODO: add a Gazebo/RViz2 screenshot or demo GIF here
+    tech: ["ROS2 Humble", "PX4 Autopilot", "Gazebo Harmonic", "RViz2", "C++", "Python", "MAVLink", "Offboard Control", "Potential Fields"],
+    // Paste the real URL over the PASTE_... placeholder to make a link appear.
+    // Links still holding a placeholder are skipped, so nothing broken ships.
+    links: [
+      { label: "See it on LinkedIn", icon: "bx bxl-linkedin", url: "https://www.linkedin.com/posts/amaldits_ros2-robotics-drone-activity-7285283593080221696-aaHB" },
+      { label: "Source on GitHub", icon: "bx bxl-github", url: "PASTE_YOUR_GITHUB_REPO_URL_HERE" }
+    ]
+  },
+
+  manipulator: {
+    title: "Mobile Manipulator - ROS2 Port & Reinforcement Learning Control",
+    image: "",
+    description: [
+      "A migration and research project on a mobile manipulator: porting a legacy ROS system to ROS2, and replacing the hand-tuned navigation behaviour with a learned policy.",
+      "The control side implements TD3 (Twin-Delayed DDPG) to train a navigation policy, which is then integrated back into the ROS2 control stack so the learned controller runs in the same interface as the classical one. The port itself covers the usual ROS1-to-ROS2 work &mdash; node lifecycle, message and service migration, launch and parameter handling."
+    ],
+    images: [],
+    tech: ["ROS2", "Python", "PyTorch", "TD3", "Reinforcement Learning", "Gazebo", "Linux"]
+  },
+
   container: {
     title: "IoT Asset Management System",
     image: "container_asset.jpg", // Replace with your actual image
@@ -251,7 +310,7 @@ const projectDetails = {
       "This IoT asset management system was developed to track and monitor shipping containers in real-time. The solution provides end-to-end visibility of container locations, enabling logistics companies to optimize their operations and improve asset utilization.",
       "The system uses ESP32-based tracking devices installed on containers, communicating with a cloud backend. A comprehensive dashboard built with .NET provides stakeholders with real-time position tracking, historical movement data, and analytics. The PostgreSQL database ensures reliable data storage and fast query performance for large-scale deployments."
     ],
-    images: ["container_asset.jpg"], // Add your images
+    images: [], // TODO: add photos (container_asset.jpg is not in the repo yet)
     tech: ["ESP32", "C++", "Python", ".NET", "PostgreSQL", "MQTT", "GPS"]
   },
   
@@ -273,7 +332,7 @@ const projectDetails = {
       "The AWLR system was implemented to monitor water levels in remote areas, providing critical data for flood early warning systems and water resource management. The system operates autonomously in locations with limited infrastructure and unreliable power supply.",
       "Using ultrasonic sensors and pressure transducers, the system continuously measures water levels with high accuracy. Data is transmitted via cellular networks using MQTT protocol to ensure reliable delivery even with intermittent connectivity. The OpenWrt-based device includes local data buffering, ensuring no data loss during network outages. The backend system processes incoming data and triggers alerts when water levels exceed predefined thresholds."
     ],
-    images: ["awlr_system.jpg"], // Add your images
+    images: [], // TODO: add photos (awlr_system.jpg is not in the repo yet)
     tech: ["Linux", "OpenWrt", "Go", "MQTT", "Modbus", "Sensors", "IoT"]
   },
   
@@ -284,49 +343,57 @@ const projectDetails = {
       "This smart farming system was deployed to modernize agricultural operations through automation and data-driven decision making. The system monitors environmental conditions, controls irrigation and fertilization systems, and provides farmers with actionable insights through a mobile and web interface.",
       "The solution integrates multiple sensor types (soil moisture, temperature, humidity, light intensity) connected via Modbus protocol to a central RTU. The RTU processes sensor data locally and communicates with the cloud using MQTT for real-time monitoring. Automation capabilities include scheduled irrigation, threshold-based alerts, and remote control of farm equipment. The system has significantly improved water efficiency and crop yields while reducing manual labor requirements."
     ],
-    images: ["smartfarm.jpg"], // Add your images
+    images: [], // TODO: add photos (smartfarm.jpg is not in the repo yet)
     tech: ["Linux", "OpenWrt", "Go", "MQTT", "Modbus", "Sensors", "Automation", "IoT"]
   },
   
   sawit: {
     title: "Oil Palm Fruit Sortation Machine",
-    image: "mesin sawit 1.jpeg",
+    image: "mesin-sawit-1.jpeg",
     description: [
       "This machine was developed to automatically sort oil palm fruits based on their ripeness level using a computer vision-based system. The traditional manual sorting process is time-consuming, inconsistent, and prone to human error.",
       "The system uses advanced image processing and machine learning algorithms to accurately classify palm fruits into different ripeness categories. This improves sorting accuracy, operational efficiency, and consistency in the grading process, ultimately enhancing the quality of palm oil production."
     ],
-    images: ["mesin sawit 1.jpeg", "mesin sawit 2.jpeg"],
+    images: ["mesin-sawit-1.jpeg", "mesin-sawit-2.jpeg"],
     tech: ["Python", "OpenCV", "Machine Learning", "Computer Vision", "Arduino", "Embedded Systems"]
   },
   uav: {
-    title: "Unmanned Aerial Vehicle",
+    title: "Autonomous Drone for Bridge Structural Inspection",
     image: "drone.jpg",
     description: [
-      "When I was in college working on my final thesis, I worked on a project related to UAVs (Unmanned Aerial Vehicles). The mission of this vehicle is to carry out inspections on bridges with as little human influence as possible (semi-autonomous).",
-      "The bridge sensors provide position and status data. When an issue is detected, signals are sent to the Ground Control Station (GCS). The drone receives these signals and, with operator validation, takes off to perform inspections. The drone flies with specific patterns depending on the bridge's condition and captures video or image data for surveyors. After completing the mission, the drone returns to the GCS."
+      "My undergraduate thesis at the Laboratory of Advanced Robotics, ITB: an autonomous UAV platform whose mission is to inspect bridges with as little human involvement as possible. Published as \"Visual Investigation of Bridge Damage Using Autonomous Drone.\"",
+      "Bridge-mounted sensors provide position and status data. When an issue is detected, signals are sent to the Ground Control Station (GCS). The drone receives these signals and, with operator validation, takes off to perform the inspection. It flies specific survey patterns depending on the bridge's condition and captures video and image data for surveyors, then returns to the GCS.",
+      "On the perception side I implemented a vision pipeline supporting detection and assessment of cracks, moss growth, and uneven surfaces on concrete structures &mdash; the work covered flight control, onboard perception, and the mission architecture that ties them together."
     ],
     images: ["drone.jpg", "output.gif"],
-    tech: ["Python", "C++", "ROS", "PX4", "OpenCV", "PyTorch", "Linux"]
+    // YouTube video id only (the bit after youtu.be/ or watch?v=), not the whole URL
+    video: {
+      id: "Z2iLCrLmyS8",
+      caption: "Flight trial of the movement algorithm &mdash; the drone follows waypoint coordinates served from the ground station, implemented with DroneKit-Python."
+    },
+    tech: ["Python", "C++", "ROS", "PX4", "DroneKit-Python", "OpenCV", "PyTorch", "Linux"]
   },
   tram: {
     title: "Autonomous Tram",
     image: "tram_assets/tram_inka_1.jpg",
     description: [
       "This project is a collaboration between ITB (Institut Teknologi Bandung), INKA (Industri Kereta Api), riset.ai, and LPDP (Lembaga Pengelola Dana Pendidikan) which aims to create a tram that can run autonomously.",
-      "To assist autonomous operation, the tram has 9 cameras, a LIDAR, 2 RADAR, a GNSS, and an IMU. All sensors communicate with the tram's NVIDIA DRIVE AGX embedded computer which interfaces with the tram's PLC. In this project, I was responsible for integrating the tram's hardware system from power distribution to sensor data processing."
+      "To assist autonomous operation, the tram has 9 cameras, a LIDAR, 2 RADAR, a GNSS, and an IMU. All sensors communicate with the tram's NVIDIA DRIVE AGX embedded computer which interfaces with the tram's PLC. In this project, I was responsible for integrating the tram's hardware system from power distribution to sensor data processing.",
+      "Concretely, I built the data-logging program that captured GNSS waypoint coordinates and LiDAR point-cloud data used downstream for navigation and obstacle-detection development, and designed and implemented the first prototype power system supplying the onboard sensors and the compute unit &mdash; which made integrated system testing considerably more reliable. Progress was reported on a biweekly Scrum cadence to both technical and program stakeholders across the four partner organizations."
     ],
     images: ["tram_assets/tram_inka_1.jpg", "tram_assets/tram_hardware_2.jpeg"],
-    tech: ["Python", "C++", "Linux", "NVIDIA DRIVE AGX"]
+    tech: ["Python", "C++", "Linux", "GNSS", "LiDAR", "NVIDIA DRIVE AGX"]
   },
   forklift: {
     title: "Autonomous Forklift",
     image: "forklift_assets/forklift2.jpeg",
     description: [
       "This project is a collaboration between ITB and CPIN (Charoen Pokphand Indonesia Tbk) which aims to create a forklift that can run autonomously and locate itself in indoor facilities. The forklift has a LIDAR and an IMU which communicate with a mini PC.",
-      "My role was to integrate all sensors and serve the data for processing. The 2 sensors generate data that needs to be filtered using Kalman Filter. This data is needed for implementing HectorSLAM so the forklift can map the warehouse, locate itself, and automate cargo handling operations."
+      "My role was to integrate all sensors and serve the data for processing. The 2 sensors generate data that needs to be filtered using Kalman Filter. This data is needed for implementing HectorSLAM so the forklift can map the warehouse, locate itself, and automate cargo handling operations.",
+      "On top of the mapping pipeline I researched and evaluated probabilistic localization with Adaptive Monte Carlo Localization (AMCL) in ROS and Gazebo, running the particle filter against the HectorSLAM-generated occupancy map to assess pose accuracy in the facility layout. I also supported the prototype firmware and system integration on the Raspberry Pi controller, turning the localization research into an implementable autonomous-platform architecture."
     ],
     images: ["forklift_assets/forklift.PNG", "forklift_assets/forklift_map.png"],
-    tech: ["Python", "C++", "ROS", "SLAM", "Kalman Filter", "Linux"]
+    tech: ["Python", "C++", "ROS", "Gazebo", "HectorSLAM", "AMCL", "Kalman Filter", "Linux"]
   },
   worker: {
     title: "Worker Tracker",
@@ -353,7 +420,8 @@ const projectDetails = {
     image: "humanoid_1.PNG",
     description: [
       "This project was created to participate in KRSBI-H (Kontes Robot Sepak Bola - Humanoid) competition. The robot can walk, kick, and coordinate with other robots for passing.",
-      "The humanoid robot has 20 servos communicating via RS485/TTL, connected to a CM730 sub-controller. It also has a camera and mini PC for object detection (ball, goalpost, lines). I worked on maintaining electrical components and creating interfaces to simplify strategy creation before games."
+      "The humanoid robot has 20 servos communicating via RS485/TTL, connected to a CM730 sub-controller. It also has a camera and mini PC for object detection (ball, goalpost, lines). I worked on maintaining electrical components and creating interfaces to simplify strategy creation before games.",
+      "As Head of Electrical Division I led a five-person team building three competition-ready robots for the Indonesian Robot Contest, coordinating the electrical, mechanical, and programming workstreams against fixed competition deadlines. I diagnosed and resolved roughly 75% of the electrical issues the team hit, and built a hardware-button interface with behavior logic for robot state control."
     ],
     images: ["humanoid.gif", "humanoid2.gif"],
     tech: ["C++", "ROS", "OpenCV", "Arduino", "Robotics", "Linux"]
@@ -368,21 +436,77 @@ function openProjectDetail(projectId) {
   
   if (!project) return;
   
-  // Build modal content
-  let imagesHTML = `<div class="project-detail-images">` +
-    project.images.map(img => 
-      `<img src="${img}" alt="${project.title}" class="project-detail-image">`
-    ).join('') +
-    `</div>`;
+  // Build modal content (projects without media yet simply render no image strip)
+  const images = project.images || [];
+  let imagesHTML = images.length
+    ? `<div class="project-detail-images">` +
+      images.map(img =>
+        `<img src="${img}" alt="${project.title}" class="project-detail-image">`
+      ).join('') +
+      `</div>`
+    : '';
   
-  let techHTML = project.tech.map(tech => 
+  // Embedded YouTube video, if the project has one (nocookie host, lazy-loaded)
+  const video = project.video;
+  let videoHTML = video && video.id
+    ? `<div class="project-detail-video">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/${video.id}"
+            title="${project.title} - video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        ${video.caption ? `<p class="video-caption">${video.caption}</p>` : ''}
+      </div>`
+    : '';
+
+  let techHTML = project.tech.map(tech =>
     `<span class="tech-badge">${tech}</span>`
   ).join('');
   
-  let descriptionHTML = project.description.map(para => 
+  let descriptionHTML = project.description.map(para =>
     `<p>${para}</p>`
   ).join('');
-  
+
+  // External links - unfilled placeholders are skipped so no dead links render
+  const links = (project.links || []).filter(l => l.url && !l.url.startsWith('PASTE_'));
+  let linksHTML = links.length
+    ? `<div class="project-detail-section">
+        <h3>Links</h3>
+        <div class="project-links">` +
+      links.map(l =>
+        `<a class="project-link" href="${l.url}" target="_blank" rel="noopener">
+          <i class="${l.icon || 'bx bx-link-external'}"></i>
+          <span>${l.label}</span>
+        </a>`
+      ).join('') +
+      `</div>
+      </div>`
+    : '';
+
+  // Prose on the left, metadata sidebar (tech + any links) on the right
+  const overviewHTML = `<div class="project-detail-section">
+        <h3>Project Overview</h3>
+        ${descriptionHTML}
+      </div>`;
+
+  const techSectionHTML = `<div class="project-detail-section">
+        <h3>Technologies Used</h3>
+        <div class="project-tech">
+          ${techHTML}
+        </div>
+      </div>`;
+
+  const detailBlock = `<div class="project-detail-columns">
+      ${overviewHTML}
+      <div class="project-detail-aside">
+        ${techSectionHTML}
+        ${linksHTML}
+      </div>
+    </div>`;
+
   content.innerHTML = `
     <div class="modal-header">
       <h2>${project.title}</h2>
@@ -392,16 +516,8 @@ function openProjectDetail(projectId) {
     </div>
     <div class="modal-body">
       ${imagesHTML}
-      <div class="project-detail-section">
-        <h3>Project Overview</h3>
-        ${descriptionHTML}
-      </div>
-      <div class="project-detail-section">
-        <h3>Technologies Used</h3>
-        <div class="project-tech">
-          ${techHTML}
-        </div>
-      </div>
+      ${videoHTML}
+      ${detailBlock}
     </div>
   `;
   
